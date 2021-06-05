@@ -1,6 +1,5 @@
 //判断一个整数中是否出现重复数字
 
-
 #include <stdio.h>
 #include <stdbool.h>
 int main(void)
