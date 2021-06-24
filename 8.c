@@ -6,7 +6,7 @@ int main(void)
     int num;
     scanf("%d", &num);
     int line[num];
-    for (int in = 1; in <= num; in++)
+    for (int in = 0; in <= num; in++)
     {
         printf("输入第%d个数字：", in);
         scanf("%d", &line[in]);
