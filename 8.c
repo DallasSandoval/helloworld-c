@@ -2,16 +2,25 @@
 #include <stdio.h>
 int main(void)
 {
-    printf("输入数字个数：");
     int num;
+    printf("输入数字个数：");
     scanf("%d", &num);
-    int line[num];
-    for (int in = 0; in <= num; in++)
+
+    int line[num + 1];
+    line[0] = 0;
+    for (int in = 1; in <= num; in++)
     {
         printf("输入第%d个数字：", in);
         scanf("%d", &line[in]);
     }
-    printf("%d", line);
 
+    printf("共%d个数字：", num);
+    for (int in = 1; in <= num; in++)
+    {
+        printf("%d ", line[in]);
+    }
+
+    
+    
     return 0;
 }
