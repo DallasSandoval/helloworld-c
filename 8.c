@@ -20,14 +20,14 @@ int main(void)
         printf("%d ", line[in]);
     }
 
-    for (int count=1;;)
+    for (int count = 1;;)
     {
-        if (line[count]<line[count-1])
+        if (line[count] < line[count - 1])
         {
             int temp;
-            temp=line[count];
-            line[count]=line[count-1];
-            line[count-1]=temp;
+            temp = line[count];
+            line[count] = line[count - 1];
+            line[count - 1] = temp;
             count--;
         }
         else
@@ -35,16 +35,15 @@ int main(void)
             count++;
         }
 
-        if (count>num)
-        break;
-        
+        if (count > num)
+            break;
     }
-    
+
     printf("\n排序后：");
     for (int in = 1; in <= num; in++)
     {
         printf("%d ", line[in]);
     }
-    
+
     return 0;
 }
