@@ -20,7 +20,7 @@ int main(void)
         printf("%d ", line[in]);
     }
 
-    for (int count=1;count <=num  ; count++)
+    for (int count=1;;)
     {
         if (line[count]<line[count-1])
         {
@@ -28,8 +28,15 @@ int main(void)
             temp=line[count];
             line[count]=line[count-1];
             line[count-1]=temp;
-            count=count-2;
+            count--;
         }
+        else
+        {
+            count++;
+        }
+
+        if (count>num)
+        break;
         
     }
     
