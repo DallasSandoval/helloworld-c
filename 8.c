@@ -20,7 +20,24 @@ int main(void)
         printf("%d ", line[in]);
     }
 
+    for (int count=1;count <=num  ; count++)
+    {
+        if (line[count]<line[count-1])
+        {
+            int temp;
+            temp=line[count];
+            line[count]=line[count-1];
+            line[count-1]=temp;
+            count=count-2;
+        }
+        
+    }
     
+    printf("\n排序后：");
+    for (int in = 1; in <= num; in++)
+    {
+        printf("%d ", line[in]);
+    }
     
     return 0;
 }
